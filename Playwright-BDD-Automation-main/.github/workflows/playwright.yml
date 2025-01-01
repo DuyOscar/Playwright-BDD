@@ -4,8 +4,11 @@ on:
     branches:
       - 'main'
       - 'master'
+    paths:
+      - '.github/workflows/playwright.yml'
   pull_request:
     branches: [ main, master ]
+    
 jobs:
   test:
     timeout-minutes: 60
