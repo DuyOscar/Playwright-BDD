@@ -1,4 +1,0 @@
-{
-    "cucumberautocomplete.steps": ["tests/steps/*.js"]
-    
-}
