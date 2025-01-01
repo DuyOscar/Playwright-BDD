@@ -4,6 +4,7 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+
 jobs:
   test:
     steps:
@@ -12,9 +13,7 @@ jobs:
       with:
         node-version: lts/*
     - name: Install dependencies
-      run: |
-        cd Playwright-BDD 
-        npm install 
+      run: npm install  # Assuming package.json is in the root directory
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
@@ -23,5 +22,5 @@ jobs:
       if: ${{ !cancelled() }}
       with:
         name: playwright-report
-        path: playwright-report/
+        path: ./playwright-report/  # Assuming report directory is in the root directory
         retention-days: 30
