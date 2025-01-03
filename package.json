@@ -14,11 +14,7 @@
     "qa-test": "npx bddgen && cross-env ENV=qa npx playwright test --headed",
     "dev-test": "npx bddgen && cross-env ENV=dev npx playwright test --headed",
     "prod-test": "npx bddgen && cross-env ENV=prod npx playwright test --headed"
-
   },
-
-
-  
   "keywords": [],
   "author": "",
   "license": "ISC",
