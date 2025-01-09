@@ -2,7 +2,7 @@ import { test as setup, expect } from '@playwright/test';
 
 const authFile = 'playwright/.auth/admin.json';
 
-setup('authenticate', async ({ page })=>{
+setup('authenticate 1', async ({ page })=>{
     await page.goto('https://ecommerce-playground.lambdatest.io/');
     await page.getByRole('button',{name:'My account'}).hover();
     await page.getByText('Login').click();
